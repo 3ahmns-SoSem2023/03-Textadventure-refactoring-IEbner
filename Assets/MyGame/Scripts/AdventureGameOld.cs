@@ -262,10 +262,6 @@ public class AdventureGameOld : MonoBehaviour
             State nextState = nextStates[2];
             actualState = doTransition(actualState, nextState); ;
         }
-        else
-        {
-
-        }
 
         if (wait || overrideTextComponent)
         {
