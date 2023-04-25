@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(menuName = "State")]
-public class State : ScriptableObject{
+public class State : ScriptableObject
+{
 
-    //private static readonly System.Random getrandom = new System.Random(123);
 
     [TextArea(10,14)][SerializeField] string storyText;
     [TextArea(5, 14)] [SerializeField] string storyNextchoices;
@@ -44,7 +41,6 @@ public class State : ScriptableObject{
 
     int PickBiasedRandomState(int idxPrefered, int randomMin, int randomMax, double probabilityPrefered)
     {
-        //return getrandom.NextDouble() < 0.8 ? idxPrefered : getrandom.Next(idxMin, idxMax);
      
         if (RandomState.getrandom.NextDouble() < probabilityPrefered)
         {

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor;
 
 public class AdventureGameOld : MonoBehaviour
 {
@@ -55,7 +52,6 @@ public class AdventureGameOld : MonoBehaviour
         infoOn = true;
     }
 
-    // Use this for initialization
     void Start () {
         actualState = startingState;
         textIntroComponent.text = actualState.GetStateStory();
@@ -70,7 +66,6 @@ public class AdventureGameOld : MonoBehaviour
         SetupIntroUI();
 	}
 
-    // Update is called once per frame
     void Update () {
         ManageState();
 	}
@@ -118,7 +113,6 @@ public class AdventureGameOld : MonoBehaviour
             overrideTextComponent = wait = false;
             dehydrationCount = 100;
 
-            //return (State)AssetDatabase.LoadAssetAtPath("Assets/MyGame/States/Dead.Dehydration.asset", typeof(State));
             var deadDehyd = Resources.Load<State>("States/Dead.Dehydration");
             return deadDehyd;
 
@@ -203,7 +197,6 @@ public class AdventureGameOld : MonoBehaviour
             {
                 overrideText = "Sorry, not enough wool for knitting. collect wool";
                 overrideTextComponent = true;
-                //nextState.SetKnitNotification(/*"Sorry, not enough wool for knitting. collect wool*/");
             }
             
             Debug.Log("Wolle -2, Wasser +1");
@@ -271,7 +264,7 @@ public class AdventureGameOld : MonoBehaviour
         }
         else
         {
-            //Debug.Log("bin am leben");
+
         }
 
         if (wait || overrideTextComponent)
