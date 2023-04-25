@@ -5,7 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
 
-public class AdventureGameOld : MonoBehaviour {
+public class AdventureGameOld : MonoBehaviour
+{
 
     private static readonly System.Random getrandom = new System.Random();
     [SerializeField] Text textIntroComponent;
