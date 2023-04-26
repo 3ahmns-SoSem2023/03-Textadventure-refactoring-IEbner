@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class AdventureGame : MonoBehaviour
 {
     private const string STATEINFOALARM = "Info.Alarm";
+    private const string STATEINFODONE = "Info.Done";
     [SerializeField] Text textIntroComponent;
     [SerializeField] Text textStoryComponent;
     [SerializeField] Text textComponentChoices;
@@ -145,7 +146,7 @@ public class AdventureGame : MonoBehaviour
 
         }
 
-        if (nextState.name == "Info.Done" || nextState.name == "Collect.Info")
+        if (nextState.name == STATEINFODONE || nextState.name == "Collect.Info")
         {
             SetupInfoUI();
             overrideTextComponent = false;
