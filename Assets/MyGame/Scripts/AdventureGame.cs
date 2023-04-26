@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class AdventureGame : MonoBehaviour
 {
+    private const string STATEINFOALARM = "Info.Alarm";
     [SerializeField] Text textIntroComponent;
     [SerializeField] Text textStoryComponent;
     [SerializeField] Text textComponentChoices;
@@ -117,7 +118,7 @@ public class AdventureGame : MonoBehaviour
 
         }
 
-        if (nextState.name == "Info.Alarm")
+        if (nextState.name == STATEINFOALARM)
         {
             ResetCounters();
             Debug.Log("Counters Reseted + " + passedStatesCount + " " + collectedWoolCount + " " + dehydrationCount);
