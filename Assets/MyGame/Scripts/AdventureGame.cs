@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class AdventureGame : MonoBehaviour
 {
-
     [SerializeField] Text textIntroComponent;
     [SerializeField] Text textStoryComponent;
     [SerializeField] Text textComponentChoices;
@@ -96,7 +95,6 @@ public class AdventureGame : MonoBehaviour
 
     private State doTransition(State currentState, State nextState)
     {
-
         passedStatesCount += 1;
         dehydrationCount = (dehydrationCount < 20) ? dehydrationCount += 0.5 : dehydrationCount = 20;
 

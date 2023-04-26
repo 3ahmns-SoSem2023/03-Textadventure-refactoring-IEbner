@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class AdventureGameOld : MonoBehaviour
 {
-
     private static readonly System.Random getrandom = new System.Random();
     [SerializeField] Text textIntroComponent;
     [SerializeField] Text textStoryComponent;
